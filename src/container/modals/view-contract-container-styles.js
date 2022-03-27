@@ -6,6 +6,10 @@ export const StyledViewContractContainer = styled(Dialog)`
     margin-bottom: 10px;
     font-size: 40px;
   }
+
+  .dialog-actions {
+    padding: 20px;
+  }
 `;
 
 export const StyledBasicInfosWrap = styled.div`

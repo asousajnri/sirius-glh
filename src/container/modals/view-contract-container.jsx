@@ -3,13 +3,15 @@ import { DialogTitle, Checkbox, DialogContent, DialogActions } from '@mui/materi
 import CloseIcon from '@mui/icons-material/Close';
 import { IconButton } from '@mui/material';
 import axios from 'axios';
-import { isEmpty, isNil } from 'ramda';
+import { isEmpty } from 'ramda';
 
 import { format } from 'date-fns';
 
 import { 
   useContractContext 
 } from '../../contexts/contract-context/use-contract-context';
+
+import { SplitButton } from '../../components/split-button';
 
 import {
   StyledViewContractContainer,
@@ -94,7 +96,7 @@ export const ViewContractContainer = () => {
               </StyledBasicInfo>
               <StyledBasicInfo>
                 <label className='label' htmlFor="">Data de termino</label>
-                <span className='info'>{format(new Date(contract?.startDate), "dd-MM-yyyy")}</span>
+                <span className='info'>{format(new Date(contract?.endDate), "dd-MM-yyyy")}</span>
               </StyledBasicInfo>
               <StyledBasicInfo>
                 <label className='label' htmlFor="">Fornecedor</label>
@@ -130,7 +132,24 @@ export const ViewContractContainer = () => {
           </>
         )}
       </DialogContent>
-      <DialogActions>
+      <DialogActions
+        className="dialog-actions"
+      >
+          <SplitButton 
+            options={[
+              'Pendente',
+              'Em Andamento',
+              'Concluído - Há tempo',
+              'Concluído - Atrasado',
+              'Pausado',
+              'Cancelado',
+              'Bloqueado',
+              'Recisão'
+            ]}
+            disabled={[
+              'Pendente'
+            ]}
+          />
       </DialogActions>
     </StyledViewContractContainer>
   );

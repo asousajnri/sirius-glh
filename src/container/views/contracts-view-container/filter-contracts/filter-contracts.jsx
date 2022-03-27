@@ -29,7 +29,7 @@ export const FilterContracts = () => {
 
   const contractStatus = [
     'Concluído - Há tempo',
-    'Concluído - atradado',
+    'Concluído - atrasado',
     'Cancelado',
     'Bloqueado',
     'Recisão',
