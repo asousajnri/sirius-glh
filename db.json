@@ -7,7 +7,106 @@
     }
   ],
   "contracts": [
-
+    {
+      "contract_type": {
+        "id": 2,
+        "title": "Prestação de serviço: Logística"
+      },
+      "provider": {
+        "id": 2,
+        "name": "Anitta",
+        "contracts_type": [
+          1,
+          2
+        ],
+        "cnpj": "72.260.155/0001-98"
+      },
+      "recipient": {
+        "id": 3,
+        "name": "Bruna (bixona da goiaba)",
+        "cnpj": "12.260.155/0001-98"
+      },
+      "checklist_contract": [
+        {
+          "id": "6b116e5b-c3ba-4cdf-93a8-50bcdcac8146",
+          "item": "Noses",
+          "provider": {
+            "id": 2,
+            "isChecked": false
+          },
+          "recipient": {
+            "id": 3,
+            "isChecked": false
+          }
+        }
+      ],
+      "endDate": "2022-03-25T03:00:00.000Z",
+      "startDate": "2022-03-28T03:00:00.000Z",
+      "status": "pending",
+      "user_company": {
+        "name": "Solar Coca-Cola",
+        "cnpj": "21.237.701/0001-19",
+        "endereço": "Rua 2, N: 02"
+      },
+      "contract_value": "123",
+      "id": 1
+    },
+    {
+      "contract_type": {
+        "id": 2,
+        "title": "Prestação de serviço: Logística"
+      },
+      "provider": {
+        "id": 2,
+        "name": "Anitta",
+        "contracts_type": [
+          1,
+          2
+        ],
+        "cnpj": "72.260.155/0001-98"
+      },
+      "recipient": {
+        "id": 3,
+        "name": "Bruna (bixona da goiaba)",
+        "cnpj": "12.260.155/0001-98"
+      },
+      "checklist_contract": [
+        {
+          "id": "74a75c93-4346-4944-afd5-b03459b171ef",
+          "item": "Placa Instalada com sucesso?",
+          "provider": {
+            "id": 2,
+            "isChecked": false
+          },
+          "recipient": {
+            "id": 3,
+            "isChecked": false
+          }
+        },
+        {
+          "id": "36def367-290b-4343-9aa8-1eea2993d3e5",
+          "item": "Reforma realizada com sucesso?",
+          "provider": {
+            "id": 2,
+            "isChecked": false
+          },
+          "recipient": {
+            "id": 3,
+            "isChecked": false
+          }
+        }
+      ],
+      "endDate": "2022-04-02T03:00:00.000Z",
+      "startDate": "2022-03-30T03:00:00.000Z",
+      "status": "pending",
+      "user_company": {
+        "name": "Solar Coca-Cola",
+        "cnpj": "21.237.701/0001-19",
+        "endereço": "Rua 2, N: 02"
+      },
+      "contract_value": "899,00",
+      "id": 2
+    }
   ],
   "contracts_type": [
     {
