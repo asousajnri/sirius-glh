@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 import { useUserContext } from '../../../contexts/user-context';
+import { useContractContext } from '../../../contexts/contract-context/use-contract-context';
 
 import {
   Paper,
@@ -23,7 +24,9 @@ import { Button } from '../../../components/button';
 export const ContractsViewContainer = () => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
+
   const { setContracts, contracts } = useUserContext();
+  const { setContractId, setOpenModal } = useContractContext();
 
   const columns = [
     { id: 'code', label: 'Código', minWidth: 170 },
@@ -142,7 +145,15 @@ export const ContractsViewContainer = () => {
                       return (
                         <TableCell key={column.id} align={column.align}>
                           {column.id === 'contractView' ? (
-                            <Button variant="contained">Visualizar</Button>
+                            <Button 
+                              variant="contained"
+                              onClick={() => {
+                                setOpenModal(true);
+                                setContractId(row.code)
+                              }}
+                            >
+                              Visualizar
+                            </Button>
                           ) : value}
                         </TableCell>
                       );

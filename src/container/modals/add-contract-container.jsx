@@ -119,6 +119,7 @@ export const AddContractContainer = () => {
     setCheckListContract(prevState => [
       ...prevState,
       {
+        "id": uuidv4(),
         "item": newCheckListItem,
         "provider": {
           "id": provider.id,
