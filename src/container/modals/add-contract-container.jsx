@@ -62,7 +62,7 @@ export const AddContractContainer = () => {
     setContractType('');
 
     try {
-      const { data }= await axios.get('http://localhost:3006/contracts_type');
+      const { data }= await axios.get(`${process.env.REACT_APP_JSON_SERVER}/contracts_type`);
       setContractsType(data);
     } catch (err) {
       return err;
@@ -79,7 +79,7 @@ export const AddContractContainer = () => {
     try {
       if(!contractType) return;
 
-      const { data }= await axios.get('http://localhost:3006/providers');
+      const { data }= await axios.get(`${process.env.REACT_APP_JSON_SERVER}/providers`);
 
       const providersFiltered = data.filter(providerItem => {
         return providerItem.contracts_type.includes(contractType.id)
@@ -100,7 +100,7 @@ export const AddContractContainer = () => {
 
     try {
       if(!provider) return;
-      const { data }= await axios.get('http://localhost:3006/recipients');
+      const { data }= await axios.get(`${process.env.REACT_APP_JSON_SERVER}/recipients`);
       setRecipients(data);
     } catch (err) {
       return err;

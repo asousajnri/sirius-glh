@@ -106,7 +106,7 @@ export const ContractsViewContainer = () => {
   };
 
   const getContracts = React.useCallback(async () => {
-    const { data } = await axios.get('http://localhost:3006/contracts');
+    const { data } = await axios.get(`${process.env.REACT_APP_JSON_SERVER}/contracts`);
     setContracts(data);
   }, [setContracts])
 
